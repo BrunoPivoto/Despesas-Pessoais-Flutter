@@ -1,8 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import '../models/transaction.dart';
 import 'package:intl/intl.dart';
 
-class TransactionItem extends StatelessWidget {
+class TransactionItem extends StatefulWidget {
   final Transaction tr;
   final void Function(String) onRemove;
 
@@ -11,6 +13,28 @@ class TransactionItem extends StatelessWidget {
     required this.tr,
     required this.onRemove,
   }) : super(key: key);
+
+  @override
+  State<TransactionItem> createState() => _TransactionItemState();
+}
+
+class _TransactionItemState extends State<TransactionItem> {
+  static const colors = [
+    //Colors.red,
+    // Colors.blue,
+    Colors.green,
+    Colors.yellow,
+    Colors.amber,
+    Colors.black,
+  ];
+
+  Color? _backgroundColor;
+  @override
+  void initState() {
+    super.initState();
+    int i = Random().nextInt(4);
+    _backgroundColor = colors[i];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +46,13 @@ class TransactionItem extends StatelessWidget {
       ),
       child: ListTile(
           leading: CircleAvatar(
-            backgroundColor: Colors.purple,
+            backgroundColor: _backgroundColor,
             radius: 30,
             child: Padding(
               padding: const EdgeInsets.all(6),
               child: FittedBox(
                 child: Text(
-                  'R\$${tr.value.toStringAsFixed(2)}',
+                  'R\$${widget.tr.value.toStringAsFixed(2)}',
                   style: const TextStyle(
                     color: Colors.white,
                   ),
@@ -37,16 +61,16 @@ class TransactionItem extends StatelessWidget {
             ),
           ),
           title: Text(
-            tr.title,
+            widget.tr.title,
             style: Theme.of(context).textTheme.titleLarge,
           ),
           subtitle: Text(
-            DateFormat('d MMM y', 'pt_BR').format(tr.date),
+            DateFormat('d MMM y', 'pt_BR').format(widget.tr.date),
           ),
           trailing: //MediaQuery.of(context).size.width > 480
               //?
               TextButton.icon(
-            onPressed: () => onRemove(tr.id),
+            onPressed: () => widget.onRemove(widget.tr.id),
             label: Text(
               'Remover',
               style: TextStyle(color: Theme.of(context).colorScheme.error),
