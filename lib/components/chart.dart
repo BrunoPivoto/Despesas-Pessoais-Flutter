@@ -39,19 +39,9 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //groupedTransactions;
     return Card(
       elevation: 6,
       margin: const EdgeInsets.all(20),
-      // child: Column(
-      // children: [
-      // const Padding(
-      //   padding: EdgeInsets.all(8.0),
-      //   child: Text(
-      //     'Últimos 7 dias',
-      //     style: TextStyle(color: Colors.black),
-      //   ),
-      // ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: groupedTransactions.map((tr) {
@@ -60,9 +50,9 @@ class Chart extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 18.0),
               child: ChartBar(
-                day: tr['day'].toString(),
+                label: tr['day'].toString(),
                 value: double.parse(tr['value'].toString()),
-                percent: _weekTotalValue == 0
+                percentage: _weekTotalValue == 0
                     ? 0
                     : (tr['value'] as double) / _weekTotalValue,
               ),
@@ -70,8 +60,6 @@ class Chart extends StatelessWidget {
           );
         }).toList(),
       ),
-      // ],
-      //),
     );
   }
 }
