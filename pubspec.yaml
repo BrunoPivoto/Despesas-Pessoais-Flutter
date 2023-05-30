@@ -51,7 +51,7 @@ dev_dependencies:
 
 flutter_native_splash:
   color : "#3F51B5"
-  image : "assets/images/wallet-icon.png"
+  image : "assets/images/wallet-splash.png"
   android : true
   ios: true
 
