@@ -46,7 +46,7 @@ $ Run & Debug ou a tecla F5
 ```
 ---
 ### Prints da Aplicação
-<img style="border-radius: 20%;" src="https://github.com/BrunoPivoto/Despesas-Pessoais-Flutter/assets/tela_vazia.jpg" width="120px;" alt="120px"/><br>
+<img style="border-radius: 5%;" src="https://github.com/BrunoPivoto/Despesas-Pessoais-Flutter/blob/main/assets/images/tela_vazia.jpeg" width="120px;" alt="120px"/>           <img style="border-radius: 5%;" src="https://github.com/BrunoPivoto/Despesas-Pessoais-Flutter/blob/main/assets/images/tela_cadastro.jpeg" width="120px;" alt="120px"/>           <img style="border-radius: 5%;" src="https://github.com/BrunoPivoto/Despesas-Pessoais-Flutter/blob/main/assets/images/tela_preenchida.jpeg" width="120px;" alt="120px"/><br>
 ---
 
 ##  Autor
