@@ -37,13 +37,16 @@ $ flutter pub get
 ###  Rodando a aplicação
 
 ```bash
-
-# Inicie o debug 
-$ Run & Debug ou a tecla F5 no Visual Studio Code
-# Após escolher o dispositivo, a primeira build será feita, o que popde ser demorado, logo após a aplicação abrirá no dispositivo selecionado.
+$ Execute o comando `flutter run` para iniciar o aplicativo.
+# Ou inicie o debug no Visual Studio Code
+$ Run & Debug ou a tecla F5 
+# Após escolher o dispositivo, a primeira build será feita, o que popde ser demorado, 
+# logo após a aplicação abrirá no dispositivo selecionado.
 
 ```
-
+---
+### Prints da Aplicação
+<img style="border-radius: 5%;" src="https://github.com/BrunoPivoto/Despesas-Pessoais-Flutter/blob/main/assets/images/tela_vazia.jpeg" width="120px;" alt="120px"/>           <img style="border-radius: 5%;" src="https://github.com/BrunoPivoto/Despesas-Pessoais-Flutter/blob/main/assets/images/tela_cadastro.jpeg" width="120px;" alt="120px"/>           <img style="border-radius: 5%;" src="https://github.com/BrunoPivoto/Despesas-Pessoais-Flutter/blob/main/assets/images/tela_preenchida.jpeg" width="120px;" alt="120px"/><br>
 ---
 
 ##  Autor
@@ -55,6 +58,6 @@ $ Run & Debug ou a tecla F5 no Visual Studio Code
 
 ---
 ##  License
-[![License](https://img.shields.io/apm/l/vim-mode?color=blue)](http://badges.mit-license.org)
+[![License](https://img.shields.io/github/license/BrunoPivoto/Despesas-Pessoais-Flutter)](http://badges.mit-license.org)
 
 - **[MIT license](https://choosealicense.com/licenses/mit/)**
