@@ -20,6 +20,7 @@ class ExpensesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData tema = ThemeData();
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -184,9 +185,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _getIconButton(IconData icon, Function() fn) {
-    return Platform.isIOS
-        ? GestureDetector(onTap: fn, child: Icon(icon))
-        : IconButton(icon: Icon(icon), onPressed: fn);
+    return Platform.isIOS ? GestureDetector(onTap: fn, child: Icon(icon)) : IconButton(icon: Icon(icon), onPressed: fn);
   }
 
   _addTransaction(String title, double value, DateTime date) {
@@ -216,8 +215,7 @@ class _MyHomePageState extends State<MyHomePage> {
     bool isLandscape = mediaQuery.orientation == Orientation.landscape;
 
     final iconList = Platform.isIOS ? CupertinoIcons.refresh : Icons.list;
-    final chartList =
-        Platform.isIOS ? CupertinoIcons.refresh : Icons.show_chart;
+    final chartList = Platform.isIOS ? CupertinoIcons.refresh : Icons.show_chart;
     final actions = [
       //Botão switch inves de icon, achei mais bonito
       // Switch(
@@ -253,9 +251,7 @@ class _MyHomePageState extends State<MyHomePage> {
       title: const Text('Despesas Pessoais'),
       actions: actions,
     );
-    final availableHeight = mediaQuery.size.height -
-        appBar.preferredSize.height -
-        mediaQuery.padding.top;
+    final availableHeight = mediaQuery.size.height - appBar.preferredSize.height - mediaQuery.padding.top;
 
     final bodyPage = SafeArea(
       child: SingleChildScrollView(
@@ -270,8 +266,7 @@ class _MyHomePageState extends State<MyHomePage> {
             if (!_showChart || !isLandscape)
               SizedBox(
                 height: availableHeight * (isLandscape ? 1 : 0.6),
-                child: TransactionList(
-                    transactions: _transactions, onDelete: _deleteTransaction),
+                child: TransactionList(transactions: _transactions, onDelete: _deleteTransaction),
               ),
           ],
         ),
