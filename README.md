@@ -9,7 +9,7 @@ As seguintes tecnologias foram utilizadas na construção do projeto:
 
  - **[Flutter](https://flutter.dev/)**
  - **[Dart](https://dart.dev/)**
- - **[Firebase](https://firebase.google.com/?hl=pt)**
+ - **[Firebase](https://firebase.google.com/?hl=pt)** (à ser implementado)
  - **[Google Fonts](https://fonts.google.com/)**
 
 > Veja o arquivo  **[pubspec.yaml](https://github.com/BrunoPivoto/Despesas-Pessoais-Flutter/pubspec.yaml)**
